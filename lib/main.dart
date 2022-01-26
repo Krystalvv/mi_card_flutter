@@ -12,36 +12,82 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+          child: Column(
             children: <Widget>[
-              Container(
-                width: 100.0,
-                color: Colors.red,
+              CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage('images/krystal.png'),
+                backgroundColor: Colors.white,
+              ),
+              Text(
+                  'Krystal Park',
+                style: TextStyle(
+                  fontSize: 40.0,
+                  color: Colors.white,
+                  fontFamily: 'Pacifico',
+                  // fontWeight: FontWeight.bold
+                ),
+              ),
+              Text(
+                'SOFTWARE ENGINEER',
+                style: TextStyle(
+                  fontFamily: 'Source Sans Pro',
+                  color: Colors.teal.shade100,
+                  fontSize: 18.0,
+                  letterSpacing: 2.5,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               Container(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25.0),
+                padding: EdgeInsets.all(10.0),
+                child: Row(
                   children: <Widget>[
-                    Container(
-                      width: 100.0,
-                      height: 100.0,
-                      color: Colors.yellow,
+                    Icon(
+                      Icons.phone,
+                      color: Colors.teal,
                     ),
-                    Container(
-                      width: 100.0,
-                      height: 100.0,
-                      color: Colors.green,
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Text(
+                      '+82 10 5603 9973',
+                      style: TextStyle(
+                        fontFamily: 'Source Sans Pro',
+                        color: Colors.teal,
+                        fontSize: 15.0,
+                      ),
                     ),
                   ],
                 ),
               ),
               Container(
-                width: 100,
-                color: Colors.blue,
-              ),
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25.0),
+                padding: EdgeInsets.all(10.0),
+                child: Row(
+                  children: <Widget>[
+                    Icon(
+                      Icons.email,
+                      color: Colors.teal,
+                    ),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Text(
+                      'p.krystalvv@gmail.com',
+                      style: TextStyle(
+                        fontFamily: 'Source Sans Pro',
+                        color: Colors.teal,
+                        fontSize: 15.0,
+                      ),
+                    ),
+                  ],
+                ),
+              )
             ],
+
           ),
         ),
       ),
